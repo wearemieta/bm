@@ -283,7 +283,7 @@ create_bookmark_screenshots() {
   for url in $urls; do
     local path=$THUMBS/`echo $url | md5`.png
     if ! test -f $path; then
-      webkit2png -C -o out.png $url
+      webkit2png --ignore-ssl-check -C -o out.png $url
       mv out.png-clipped.png $path
       echo " ... added $path"
     fi
