@@ -299,7 +299,7 @@ create_bookmark_screenshots() {
 view_bookmark_screenshots() {
   create_bookmark_screenshots
 
-  echo "<title>Bookmarks</title>" > $HTML
+  echo "<meta charset='utf-8'><title>Bookmarks</title>" > $HTML
   style >> $HTML
 
   (
